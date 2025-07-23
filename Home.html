@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+
+<!--        navbar-->
+
+        <div class="navbar">
+            <div class="menu-bar"><i class="fa fa-bars" onclick="toggleSidebar()" style="cursor:pointer;"></i></div>
+            <div class="logo">
+                <img class="oryx-logo" src="Images/logo.png" alt="oryx-logo">
+            </div>
+            <div class="search-bar">
+                <div class="home-icon"><i class="fa-solid fa-house"></i></div>
+                <div class="search-box">
+                    <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <input class="search-input" type="text" placeholder="Search">
+                </div>
+            </div>
+<!--            <div class="menu">-->
+<!--                <div class="Home">Home</div>-->
+<!--                <div class="About">About</div>-->
+<!--                <div class="Services">Services</div>-->
+<!--                <div class="Contact">Contact</div>-->
+<!--            </div>-->
+            <div class="profile"><i class="fa-solid fa-user"></i></div>
+        </div>
+
+
+        <!-- sidebar -->
+        <div id="sidebar" class="sidebar">
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Mentors</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </div>
+        <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
+        <script>
+            function toggleSidebar() {
+                const sidebar = document.getElementById('sidebar');
+                const overlay = document.getElementById('overlay');
+
+                if (sidebar.style.left === '0px') {
+                    sidebar.style.left = '-250px';
+                    overlay.style.width = '0';
+                } else {
+                    sidebar.style.left = '0px';
+                    overlay.style.width = '100%';
+                }
+            }
+        </script>
+
+
+        <!--        hero section-->
+        <div class="hero-section">
+            <div class="hero-text">
+                <h1>WELCOME TO ORYX<br><span>Join us on a journey to unlock the full potential</span></h1>
+<!--                <p>Oryx is your guide to navigating its complexities and seizing its opportunities. We offer unparalleled educational programs, developed by leading professionals, to elevate your technical prowess and strategic thinking. Join us on a journey to unlock your full potential and become an indispensable asset in the software domain. Empower your career with Oryx."A</p>-->
+            </div>
+            <div class="hero-buttons">
+                <button class="button1">Become a Mentor</button>
+                <button class="button2">Explore Courses</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
