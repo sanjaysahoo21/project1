@@ -49,6 +49,7 @@ html,body {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 .fa-house {
     position: absolute;
@@ -163,6 +164,7 @@ html,body {
     border-radius: 50px;
     border: none;
     font-size: 18px;
+    cursor: pointer;
 }
 .hero-buttons .button1 {
     border: 2px solid black;
@@ -170,4 +172,7 @@ html,body {
 .hero-buttons .button2 {
     background-color: black;
     color: white;
+}
+.hero-buttons button:hover{
+    background: #5855eb;
 }
